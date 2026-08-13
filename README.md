@@ -1,7 +1,7 @@
 Smart Room Climate Control System
 
 Course: EECS 1021 – Object-Oriented Programming from Sensors to Actuators
-Institution: York University
+Institution: York University   
 Date: August 2026
 
 Overview
