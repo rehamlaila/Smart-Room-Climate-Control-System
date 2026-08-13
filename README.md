@@ -1,5 +1,4 @@
-# Smart-Room-Climate-Control-System
-Arduino and Java-based smart room climate monitoring and control system.
+# Smart Room Climate Control System
 Course: EECS 1021 – Object-Oriented Programming from Sensors to Actuators
 Institution: York University
 Date: August 2026
