@@ -1,10 +1,10 @@
-Smart Room Climate Control System
+# Smart Room Climate Control System
 
-Course: EECS 1021 – Object-Oriented Programming from Sensors to Actuators
-Institution: York University
-Date: August 2026
+**Course:** EECS 1021 – Object-Oriented Programming from Sensors to Actuators  
+**Institution:** York University  
+**Date:** August 2026
 
-Overview
+## Overview
 
 The Smart Room Climate Control System monitors room temperature and humidity in real time using the Seeed Studio Grove Beginner Kit for Arduino and a Java application.
 
@@ -12,93 +12,108 @@ The user enters a desired temperature in the Java application. The system compar
 
 LED indicators are used to represent the climate-control state without requiring a physical HVAC system.
 
-Features
-Real-time temperature and humidity monitoring
-User-defined desired temperature
-Automatic climate-control decisions
-Serial communication between Java and Arduino
-LED indicators for system output
-System status updates
-Safe shutdown using the Q command
-Error handling for invalid sensor data and connection problems
-Project Structure
-Embedded Firmware
+## Features
 
-Embedded-Firmware/
+- Real-time temperature and humidity monitoring
+- User-defined desired temperature
+- Automatic climate-control decisions
+- Serial communication between Java and Arduino
+- LED indicators for system output
+- System status updates
+- Safe shutdown using the `Q` command
+- Error handling for invalid sensor data and connection problems
 
-SmartClimatePico.ino
-ClimateController.cpp
-ClimateController.h
-DHTSensor.cpp
-DHTSensor.h
-Java Application
+## Project Structure
 
-Java-Application/src/
+### Embedded Firmware
 
-Main.java
-ClimateController.java
-ClimateData.java
-SerialManager.java
-Hardware Setup
+`Embedded-Firmware/`
+
+- `SmartClimatePico.ino`
+- `ClimateController.cpp`
+- `ClimateController.h`
+- `DHTSensor.cpp`
+- `DHTSensor.h`
+
+### Java Application
+
+`Java-Application/src/`
+
+- `Main.java`
+- `ClimateController.java`
+- `ClimateData.java`
+- `SerialManager.java`
+
+## Hardware Setup
 
 The system uses:
 
-Seeed Studio Grove Beginner Kit for Arduino
-Seeed Studio Grove Temperature & Humidity Sensor
-LED indicators
-USB cable
-Computer
+- Seeed Studio Grove Beginner Kit for Arduino
+- Seeed Studio Grove Temperature & Humidity Sensor
+- LED indicators
+- USB cable
+- Computer
 
 Connect the temperature and humidity sensor and LED outputs according to the connections used in the embedded firmware.
 
 Connect the Arduino system to the computer using a USB cable. The USB connection provides power and allows serial communication with the Java application.
 
-Dependencies and Libraries
-Embedded Firmware
-Arduino IDE
-C/C++
-Seeed Studio Grove hardware
-Java Application
-Java JDK
-IntelliJ IDEA
-jSerialComm library
-Build and Run Instructions
-Embedded Firmware
-Open SmartClimatePico.ino in Arduino IDE.
-Select the correct Arduino board.
-Select the correct serial port.
-Compile the program.
-Upload the firmware to the Arduino.
-Java Application
-Open the Java application in IntelliJ IDEA.
-Make sure the Java JDK is configured.
-Add the jSerialComm library to the project.
-Connect the Arduino system to the computer.
-Run Main.java.
-Enter the desired temperature when prompted.
-Enter Q to safely stop the program.
-How It Works
+## Dependencies and Libraries
+
+### Embedded Firmware
+
+- Arduino IDE
+- C/C++
+- Seeed Studio Grove hardware
+
+### Java Application
+
+- Java JDK
+- IntelliJ IDEA
+- jSerialComm library
+
+## Build and Run Instructions
+
+### Embedded Firmware
+
+1. Open `SmartClimatePico.ino` in Arduino IDE.
+2. Select the correct Arduino board.
+3. Select the correct serial port.
+4. Compile the program.
+5. Upload the firmware to the Arduino.
+
+### Java Application
+
+1. Open the Java application in IntelliJ IDEA.
+2. Make sure the Java JDK is configured.
+3. Add the jSerialComm library to the project.
+4. Connect the Arduino system to the computer.
+5. Run `Main.java`.
+6. Enter the desired temperature when prompted.
+7. Enter `Q` to safely stop the program.
+
+## How It Works
 
 The Arduino reads temperature and humidity data from the sensor and sends the readings to the Java application through serial communication.
 
-If the current temperature is above the desired temperature, the system generates FAN_ON.
+If the current temperature is above the desired temperature, the system generates `FAN_ON`.
 
-If the current temperature is equal to or below the desired temperature, the system generates FAN_OFF.
+If the current temperature is equal to or below the desired temperature, the system generates `FAN_OFF`.
 
 The LED indicators show the current climate-control state.
 
-Results
+## Results
 
 The completed prototype successfully demonstrated real-time environmental monitoring and communication between the embedded system and Java application.
 
 The system was able to process sensor data, compare the current temperature with the desired temperature, and automatically determine the correct climate-control state.
 
-Authors
+## Authors
 
-Reham
+**Reham**  
 Embedded Firmware and Hardware
 
-Sieara
+**Sieara**  
 Java Application
 
 Both team members contributed to system integration, testing, troubleshooting, and overall project development.
