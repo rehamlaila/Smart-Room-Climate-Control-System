@@ -133,6 +133,7 @@ Implement more advanced climate-control algorithms
 Authors
 
 Reham – Arduino/Pico and Embedded System
+
 Sieara – Java Application
 
 Both team members collaborated on system integration, testing, troubleshooting, and overall project development.
