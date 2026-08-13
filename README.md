@@ -1,7 +1,7 @@
 Smart Room Climate Control System
 
 Course: EECS 1021 – Object-Oriented Programming from Sensors to Actuators
-Institution: York University   
+Institution: York University
 Date: August 2026
 
 Overview
@@ -10,21 +10,21 @@ The Smart Room Climate Control System monitors room temperature and humidity in 
 
 The user enters a desired temperature in the Java application. The system compares the current temperature with the desired temperature and automatically determines whether cooling should be turned on or off.
 
-LED indicators are used to represent the heating and cooling states without requiring a physical HVAC system.
+LED indicators are used to represent the climate-control state without requiring a physical HVAC system.
 
 Features
 Real-time temperature and humidity monitoring
 User-defined desired temperature
 Automatic climate-control decisions
 Serial communication between Java and Arduino
-Heating and cooling LED indicators
+LED indicators for system output
 System status updates
 Safe shutdown using the Q command
 Error handling for invalid sensor data and connection problems
 Project Structure
 Embedded Firmware
 
-Embedded-Firmware
+Embedded-Firmware/
 
 SmartClimatePico.ino
 ClimateController.cpp
@@ -33,7 +33,7 @@ DHTSensor.cpp
 DHTSensor.h
 Java Application
 
-Java-Application/src
+Java-Application/src/
 
 Main.java
 ClimateController.java
@@ -49,9 +49,9 @@ LED indicators
 USB cable
 Computer
 
-Connect the temperature and humidity sensor and LEDs according to the connections used in the embedded firmware.
+Connect the temperature and humidity sensor and LED outputs according to the connections used in the embedded firmware.
 
-Connect the Arduino system to the computer using a USB cable for power and serial communication.
+Connect the Arduino system to the computer using a USB cable. The USB connection provides power and allows serial communication with the Java application.
 
 Dependencies and Libraries
 Embedded Firmware
@@ -73,7 +73,7 @@ Java Application
 Open the Java application in IntelliJ IDEA.
 Make sure the Java JDK is configured.
 Add the jSerialComm library to the project.
-Connect the Arduino to the computer.
+Connect the Arduino system to the computer.
 Run Main.java.
 Enter the desired temperature when prompted.
 Enter Q to safely stop the program.
@@ -85,7 +85,7 @@ If the current temperature is above the desired temperature, the system generate
 
 If the current temperature is equal to or below the desired temperature, the system generates FAN_OFF.
 
-The LEDs visually indicate the current climate-control state.
+The LED indicators show the current climate-control state.
 
 Results
 
@@ -96,7 +96,7 @@ The system was able to process sensor data, compare the current temperature with
 Authors
 
 Reham
-Embedded Firmware
+Embedded Firmware and Hardware
 
 Sieara
 Java Application
