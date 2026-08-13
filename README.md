@@ -102,7 +102,7 @@ Adding environmental data logging
 Implementing more advanced temperature-control algorithms
 Authors
 
-Reham — Arduino and Embedded System
-Sieara — Java Application
+Reham - Arduino and Embedded System
+Sieara - Java Application
 
 Both team members collaborated on system integration, testing, troubleshooting, and overall project development.
