@@ -1,108 +1,81 @@
 # Smart-Room-Climate-Control-System
 Arduino and Java-based smart room climate monitoring and control system.
-The Smart Room Climate Control System is a hardware-software integrated project that monitors room temperature and humidity and demonstrates automatic climate-control decisions.
+Course: EECS 1021 – Object-Oriented Programming from Sensors to Actuators
+Institution: York University
+Date: August 2026
 
-The system uses a Seeed Studio Grove Temperature & Humidity Sensor connected to an Arduino-based embedded system. Sensor data is transmitted to a Java application through serial communication. The Java application processes the incoming temperature data, compares it with a user-defined desired temperature, and generates the appropriate climate-control command.
+Overview
 
-Heating and cooling states are represented using LED indicators rather than a physical fan, heater, or HVAC system.
+A smart room climate control system built with Java and Arduino that monitors room temperature and humidity in real time and makes automatic climate-control decisions based on a user-defined desired temperature.
 
-Hardware
+The system uses serial communication to exchange data between the Arduino hardware and the Java application. LED indicators are used to represent heating and cooling states without requiring a physical HVAC system.
 
-The project uses:
+How It Works
 
+The Arduino collects environmental readings from a Seeed Studio Grove Temperature & Humidity Sensor and communicates the sensor data to the Java application.
+
+The user enters a desired room temperature in Java. The application processes the incoming temperature data and compares the current temperature with the desired temperature.
+
+Temperature above desired value – generates FAN_ON
+Temperature equal to or below desired value – generates FAN_OFF
+Heating/Cooling LEDs – visually represent climate-control states
+Q command – safely stops the system and disconnects the Arduino
+Features
+Real-time temperature and humidity monitoring
+User-defined desired temperature
+Automatic temperature-based control decisions
+Arduino and Java serial communication
+Heating and cooling LED indicators
+System status updates
+Safe system shutdown
+Error handling for invalid sensor data and connection failures
+Tech Stack
+Java
+Arduino/C++
+Arduino IDE
+IntelliJ IDEA
+jSerialComm
 Seeed Studio Grove Beginner Kit for Arduino
 Seeed Studio Grove Temperature & Humidity Sensor
-Heating and cooling LED indicators
-USB cable
-Computer running the Java application
-Software
-Embedded System
-Arduino IDE
-Arduino/C++ firmware
-Java Application
-Java
-IntelliJ IDEA
-jSerialComm library
-Project Structure
-Smart-Room-Climate-Control/
-│
-├── Embedded-Firmware/
-│   ├── SmartClimate.ino
-│   ├── DHTSensor.h
-│   ├── DHTSensor.cpp
-│   ├── ClimateController.h
-│   └── ClimateController.cpp
-│
-├── Java-Application/
-│   ├── Main.java
-│   ├── ClimateData.java
-│   ├── ClimateController.java
-│   └── SerialManager.java
-│
-└── README.md
-Hardware Setup
-Connect the Seeed Studio Grove Temperature & Humidity Sensor to the Grove Beginner Kit.
-Connect the Arduino to the computer using a USB cable.
-Ensure the Arduino is powered and recognized by the computer.
-Use the integrated LED indicators to represent heating and cooling states.
+Key Concepts Demonstrated
+Object-oriented programming
+Hardware-software integration
+Real-time sensor data acquisition
+Serial communication
+Sensor-to-actuator system design
+Automated decision-making
+Modular software design
+Error handling
+Files
+File	Description
+SmartClimate.ino	Main Arduino program
+DHTSensor.h	Sensor class declaration
+DHTSensor.cpp	Temperature and humidity sensor implementation
+ClimateController.h	Embedded climate controller declaration
+ClimateController.cpp	Embedded climate-control implementation
+Main.java	Main Java application and system loop
+ClimateData.java	Processes and stores incoming temperature data
+ClimateController.java	Compares current and desired temperatures and determines the control command
+SerialManager.java	Manages communication between Java and Arduino
+Results
 
-The USB connection provides power to the Arduino system and supports serial communication with the Java application.
+The completed prototype successfully demonstrated real-time environmental monitoring and hardware-software integration. Temperature data was processed by the Java application, allowing the system to make automatic climate-control decisions and communicate control commands through the serial connection.
 
-Running the Embedded Program
-Open the embedded firmware in Arduino IDE.
-Connect the Arduino to the computer using USB.
-Select the correct Arduino board and serial port.
-Compile and upload the firmware to the Arduino.
-Keep the Arduino connected while running the Java application.
-Running the Java Application
-Open the Java project in IntelliJ IDEA.
-Ensure Java and the jSerialComm library are properly configured.
-Connect the Arduino to the computer.
-Run Main.java.
-Enter the desired room temperature when prompted.
-The application establishes a serial connection with the Arduino and begins receiving sensor data.
-The current temperature is compared with the desired temperature to determine the climate-control response.
-Enter Q and press Enter to safely stop the program.
-Climate-Control Logic
-
-The Java application compares the current temperature with the desired temperature entered by the user.
-
-If the current temperature is greater than the desired temperature, the application generates FAN_ON.
-If the current temperature is equal to or below the desired temperature, the application generates FAN_OFF.
-
-These commands represent the cooling-control decision used by the prototype. Heating and cooling LED indicators are used to visually demonstrate the system state.
-
-Error Handling
-
-The Java application includes basic error handling for:
-
-Invalid sensor data
-Serial connection failures
-Missing or unavailable serial connections
-
-Invalid sensor messages are handled without allowing the application to terminate unexpectedly.
-
-Limitations
-
-The current prototype does not operate a physical fan, heater, or HVAC system. Instead, LED indicators and software commands are used to demonstrate climate-control behaviour.
-
-As a result, the system can monitor environmental conditions and demonstrate control decisions, but it cannot physically change the room temperature.
-
-The system also requires a wired USB connection between the Arduino and computer.
+The prototype uses LED indicators rather than a physical fan, heater, or HVAC system, allowing the climate-control behaviour to be demonstrated using low-power hardware.
 
 Future Improvements
-
-Possible future improvements include:
-
-Adding a physical fan or HVAC interface
-Adding appropriate driver circuitry for higher-power devices
-Implementing wireless communication
-Developing a graphical user interface
-Adding environmental data logging
-Implementing more advanced temperature-control algorithms
+Add a physical fan or HVAC interface
+Add appropriate driver circuitry for higher-power devices
+Implement wireless communication
+Develop a graphical user interface
+Add environmental data logging
+Implement more advanced climate-control algorithms
 Authors
 
-Reham - Arduino and Embedded System
-Sieara - Java Application
+Reham
+Arduino and Embedded System
+
+Sieara
+Java Application
 
 Both team members collaborated on system integration, testing, troubleshooting, and overall project development.
