@@ -15,10 +15,10 @@ The Arduino collects environmental readings from a Seeed Studio Grove Temperatur
 
 The user enters a desired room temperature in Java. The application processes the incoming temperature data and compares the current temperature with the desired temperature.
 
-Temperature above desired value – generates FAN_ON
-Temperature equal to or below desired value – generates FAN_OFF
-Heating/Cooling LEDs – visually represent climate-control states
-Q command – safely stops the system and disconnects the Arduino
+Temperature above desired value: generates FAN_ON
+Temperature equal to or below desired value: generates FAN_OFF
+Heating/Cooling LEDs: visually represent climate-control states
+Q command: safely stops the system and disconnects the Arduino
 Features
 Real-time temperature and humidity monitoring
 User-defined desired temperature
@@ -47,7 +47,7 @@ Modular software design
 Error handling
 Files
 File	Description
-SmartClimate.ino	Main Arduino program
+SmartClimatePico.ino	Main Arduino program
 DHTSensor.h	Sensor class declaration
 DHTSensor.cpp	Temperature and humidity sensor implementation
 ClimateController.h	Embedded climate controller declaration
